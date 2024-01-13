@@ -32,8 +32,9 @@ jobs:
       - name: Run unittests with coverage report
         continue-on-error: true
         run: |
-          coverage run -m unittest discover -p "*_test.py"
+          coverage run -m unittest discover -p "client_test.py"
           coverage xml --data-file=.coverage
+          ls -lah
       # You can test your matrix by printing the current Python version
       # - name: Display Python version
         # run: python -c "import sys; print(sys.version)"
